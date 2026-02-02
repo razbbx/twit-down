@@ -2,7 +2,8 @@
 
 A sleek, modern Twitter/X video downloader with a glassmorphism dark theme. Paste any Twitter video link and download in multiple quality options.
 
-![TwitDown](https://img.shields.io/badge/TwitDown-Video%20Downloader-00d4ff?style=for-the-badge)
+[![Made with React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
+[![Deployed on Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://twit-down.vercel.app)
 
 ## ✨ Features
 
