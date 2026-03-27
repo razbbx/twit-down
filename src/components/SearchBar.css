@@ -1,0 +1,131 @@
+.search-form {
+    width: 100%;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-normal);
+}
+
+.search-glow {
+    position: absolute;
+    inset: -2px;
+    background: var(--gradient-primary);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    filter: blur(8px);
+}
+
+.search-container.focused .search-glow {
+    opacity: 0.6;
+}
+
+.search-container.has-error .search-glow {
+    background: linear-gradient(135deg, #ff6b6b, #ff006e);
+    opacity: 0.5;
+}
+
+.search-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: inherit;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.search-container.focused .search-inner {
+    border-color: rgba(0, 212, 255, 0.3);
+    background: rgba(18, 18, 26, 0.95);
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.search-input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.paste-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: 6px 0 6px 6px;
+    border: none;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.paste-button:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.paste-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin: 6px;
+    border: none;
+    border-radius: var(--radius-lg);
+    background: var(--gradient-button);
+    color: white;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.search-button:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.search-button:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.search-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.search-error {
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    color: #ff6b6b;
+    text-align: center;
+}
